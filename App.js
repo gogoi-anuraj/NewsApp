@@ -7,6 +7,7 @@ import { Pressable, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import SearchScreen from "./screens/SearchScreen";
 import SavedScreen from "./screens/SavedScreen";
+import { Ionicons } from "@expo/vector-icons";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -18,9 +19,28 @@ function TabNavigator() {
         headerShown: false,
       }}
     >
-      <Tab.Screen name="HomeTab" component={HomeScreen} />
-      <Tab.Screen name="Search" component={SearchScreen} />
-      <Tab.Screen name="Saved" component={SavedScreen} />
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="home" size={20} color={color} />
+          ),
+        }}
+      />
+
+      <Tab.Screen name="Search" component={SearchScreen} 
+      options={{
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="search" size={20} color={color} />
+          ),
+        }}/>
+      <Tab.Screen name="Saved" component={SavedScreen} 
+      options={{
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="bookmark" size={20} color={color} />
+          ),
+        }}/>
     </Tab.Navigator>
   );
 }
