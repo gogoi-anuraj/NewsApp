@@ -16,11 +16,12 @@ const CategoryBar = ({categories, selected, onSelect}) => {
             key={category}
             onPress={() => onSelect(category)}
             style={{
-              paddingVertical: 15,
-              paddingHorizontal: 16,
+              paddingVertical: 2,
+              paddingHorizontal: 15,
               marginRight: 10,
               borderRadius: 20,
-              backgroundColor: isActive ? "#042050ff" : "#e9e9e9ff"
+              backgroundColor: isActive ? "#0f2b5cff" : "#e9e9e9ff",
+              justifyContent: "center"
             }}
           >
             <Text

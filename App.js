@@ -67,7 +67,7 @@ export default function App() {
               backgroundColor: Colors.primary,
             },
             headerTintColor: " #fff",
-            headerTitleStyle: { fontWeight: "bold" },
+            headerTitleStyle: { fontWeight: "bold", fontSize: 25 },
             headerRight: () => (
               <Pressable
                 onPress={() => navigation.navigate("Profile")}
@@ -90,8 +90,30 @@ export default function App() {
             ),
           })}
         />
-        <Stack.Screen name="Detail" component={DetailScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen
+          name="Detail"
+          component={DetailScreen}
+          options={{
+            title: "Details",
+            headerStyle: {
+              backgroundColor: Colors.primary,
+            },
+            headerTintColor: " #fff",
+            headerTitleStyle: { fontWeight: "bold" },
+          }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{
+            title: "Profile",
+            headerStyle: {
+              backgroundColor: Colors.primary,
+            },
+            headerTintColor: " #fff",
+            headerTitleStyle: { fontWeight: "bold" },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

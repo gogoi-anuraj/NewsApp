@@ -10,8 +10,8 @@ const ProfileScreen = () => {
         source={require("../assets/favicon.png" )}
         style = {styles.image}
       />
-      <Text style = {styles.name}>User Name</Text>
-      <Text style = {styles.bio}>User Bio:</Text>
+      <Text style = {styles.name}>User Name:Xyz</Text>
+      <Text style = {styles.bio}>User Bio: xyz Bio</Text>
     </View>
   );
 };

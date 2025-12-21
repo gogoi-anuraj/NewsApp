@@ -1,11 +1,11 @@
 const Colors = {
-  primary: "#879cc1ff",
+  primary: "#abb8cdff",
   secondary: "#ffffffff",
-  background: "#f0f2f4ff",
+  background: "#dddee0ff",
   text: "#111111",
   secondaryText:"#545454ff",
-  active: "#1f4fa3ff",
-  inactive: "#6c737eff",
+  active: "#2c65c8ff",
+  inactive: "#6c6d70ff",
   border: "#3d4f87ff",
 };
 
