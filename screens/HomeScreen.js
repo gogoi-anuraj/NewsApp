@@ -4,6 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import ArticleCard from "../components/ArticleCard";
 import news from "../assets/dummyArticles.json";
 import CategoryBar from "../components/CategoryBar";
+import Colors from "../colors";
 
 const categories = [
   "All",
@@ -41,6 +42,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: Colors.background,
   },
 });

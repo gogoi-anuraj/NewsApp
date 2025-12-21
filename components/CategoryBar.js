@@ -1,5 +1,5 @@
 import { View, Text, Pressable, ScrollView } from 'react-native'
-import React from 'react'
+
 
 const CategoryBar = ({categories, selected, onSelect}) => {
   return (
@@ -16,11 +16,11 @@ const CategoryBar = ({categories, selected, onSelect}) => {
             key={category}
             onPress={() => onSelect(category)}
             style={{
-              paddingVertical: 8,
+              paddingVertical: 15,
               paddingHorizontal: 16,
               marginRight: 10,
               borderRadius: 20,
-              backgroundColor: isActive ? "#000" : "#eee"
+              backgroundColor: isActive ? "#042050ff" : "#e9e9e9ff"
             }}
           >
             <Text

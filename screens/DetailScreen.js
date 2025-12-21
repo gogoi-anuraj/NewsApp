@@ -1,10 +1,14 @@
 import { View, Text, ScrollView, Image, StyleSheet } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from "react-native-safe-area-context";
+
 
 const DetailScreen = ({ route }) => {
   const { article } = route.params;
   return (
-    <ScrollView
+    <SafeAreaView
+    style = {{ flex:1}}>
+      <ScrollView
       style={styles.container}
     >
 
@@ -67,6 +71,8 @@ const DetailScreen = ({ route }) => {
       </Text>
 
     </ScrollView>
+    </SafeAreaView>
+    
   )
 }
 
@@ -74,7 +80,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#f5f5f5",
-    contentContainerStyle:{ padding: 15 }
+    padding: 15
   },
 })
 

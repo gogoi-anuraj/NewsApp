@@ -1,10 +1,10 @@
 import { View, Text, Image, StyleSheet, Pressable } from "react-native";
-
+import Colors from "../colors";
 
 
 const ArticleCard = ({ article, onPress }) => {
   return (
-    <Pressable onPress={onPress} style={{ padding: 12 }}>
+    <Pressable onPress={onPress} style={({ pressed }) => [{ padding: 12 }, pressed && {backgroundColor:"rgba(11, 11, 11, 0.27)"}]}>
       
       <Image
         source={{ uri: article.urlToImage }}
@@ -18,10 +18,10 @@ const ArticleCard = ({ article, onPress }) => {
       </Text> 
 
       
-      <Text style={{ color: "gray", marginTop: 4 }}>By {article.author}</Text>
+      <Text style={{ color: Colors.secondaryText, marginTop: 4 }}>By {article.author}</Text>
 
       
-      <Text style={{ color: "gray", fontSize: 12 }}>
+      <Text style={{ color: Colors.secondaryText, fontSize: 12 }}>
         {new Date(article.publishedAt).toDateString()}
       </Text>
     </Pressable>

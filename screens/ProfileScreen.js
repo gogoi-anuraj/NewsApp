@@ -1,11 +1,13 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
+import Colors from "../colors";
+
 
 const ProfileScreen = () => {
   return (
     <View style = {styles.container}>
       <Image
-        source={require("../assets/icon.png" )}
+        source={require("../assets/favicon.png" )}
         style = {styles.image}
       />
       <Text style = {styles.name}>User Name</Text>
@@ -28,15 +30,18 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 100,
     marginBottom: 15,
+    borderWidth: 2,
+    borderColor: Colors.border
   },
   name: {
     fontSize: 18,
     fontWeight: "bold",
+    color: Colors.text
   },
   bio: {
     marginTop: 8,
     fontSize: 14,
-    color: "#666",
+    color: Colors.secondaryText,
     textAlign: "center",
     paddingHorizontal: 20,
   },
